@@ -129,7 +129,7 @@ class VolumeManager(
         }
 
     /** Attenuation of the slicing planes, values > 0.99f will result in a cut. */
-    var slicingAttenuation = 0.0f
+    //var slicingAttenuation = 0.0f
 
 
 
@@ -607,7 +607,7 @@ class VolumeManager(
         if(repaint) {
             context.runTextureUpdates()
         }
-        shaderProperties["slicingAttenuation"] = slicingAttenuation
+        //shaderProperties["slicingAttenuation"] = slicingAttenuation
 
         return readyToRender()
     }
