@@ -10,7 +10,7 @@ plugins {
     java
     kotlin("jvm") version ktVersion
     scenery.base
-//    scenery.docs
+    //    scenery.docs
     scenery.publish
     scenery.sign
     id("com.github.elect86.sciJava") version "0.0.4"
@@ -145,6 +145,8 @@ tasks {
             }
         }
     }
+
+    task<Copy>("copyDeps") { from(configurations.default).into("$buildDir/deps") }
 }
 
 val dokkaJavadocJar by tasks.register<Jar>("dokkaJavadocJar") {
