@@ -151,6 +151,7 @@ tasks {
     task<Jar>("testJar") {
         archiveClassifier.set("tests")
         from(sourceSets.test.get().allSource)
+        dependsOn("assemble")
     }
 }
 
