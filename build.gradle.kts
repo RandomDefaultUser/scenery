@@ -147,6 +147,11 @@ tasks {
     }
 
     task<Copy>("copyDeps") { from(configurations.default).into("$buildDir/deps") }
+
+    task<Jar>("testJar") {
+        archiveClassifier.set("tests")
+        from(sourceSets.test.get().allSource)
+    }
 }
 
 val dokkaJavadocJar by tasks.register<Jar>("dokkaJavadocJar") {
