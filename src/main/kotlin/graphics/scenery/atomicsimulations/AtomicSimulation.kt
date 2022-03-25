@@ -70,6 +70,7 @@ open class AtomicSimulation(override var name: String = "DFTSimulation", private
             with(it.component1()){
                 spatial {
                     position = scalingFactor * it.component2()
+                    position.y *= -1
                 }
                 material {
                     metallic = 0.3f
